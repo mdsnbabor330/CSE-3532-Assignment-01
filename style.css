@@ -1083,3 +1083,143 @@ textarea.form-input {
   box-shadow: var(--shadow-rose-glow);
   transform: translateY(-5px);
 }
+
+/* Animations */
+@keyframes fillProgress {
+  0% {
+    width: 0%;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-image-wrapper {
+    order: 1;
+  }
+
+  .hero-tagline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .about-grid,
+  .skills-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-skills-grid,
+  .soft-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-toggle-label {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: rgba(236, 240, 243, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(209, 217, 230, 0.7);
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-normal);
+    z-index: 999;
+  }
+
+  .nav-toggle:checked~.nav .nav-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  .nav-toggle:checked ~ .nav-overlay {
+    pointer-events: auto;
+  }
+
+  .nav-toggle:checked~.nav-toggle-label span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+  }
+
+  .nav-toggle:checked~.nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked~.nav-toggle-label span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+  }
+
+  .btn-header {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top: 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-skills-grid,
+  .soft-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-list,
+  .form-group-row,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
