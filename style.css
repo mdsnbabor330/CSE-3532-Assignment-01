@@ -721,3 +721,173 @@ textarea {
   color: var(--text-main);
   gap: 0.8rem;
 }
+
+/* Skills Section */
+.skills-group {
+  margin-bottom: 2rem;
+}
+
+.skills-group-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid rgba(209, 217, 230, 0.6);
+}
+
+.skills-group-title i {
+  color: var(--accent-rose);
+}
+
+.tech-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.tech-skill-card {
+  background: var(--bg-card);
+  box-shadow: var(--shadow-neu-outset);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tech-skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-neu-hover);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.skill-icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-neu-pressed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+.tech-icon-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.skill-name-group {
+  flex-grow: 1;
+}
+
+.skill-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.skill-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.skill-percent-badge {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--grad-primary);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(255, 1, 79, 0.3);
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 9px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-neu-pressed);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+  position: relative;
+  animation: fillProgress 1.8s ease-out forwards;
+}
+
+.soft-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.soft-feature-card {
+  background: var(--bg-card);
+  box-shadow: var(--shadow-neu-outset);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  transition: var(--transition-normal);
+}
+
+.soft-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-neu-hover);
+}
+
+.soft-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-neu-outset);
+  color: var(--accent-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  transition: var(--transition-fast);
+}
+
+.soft-feature-card:hover .soft-icon-box {
+  background: var(--accent-rose);
+  color: #fff;
+  box-shadow: var(--shadow-rose-glow);
+}
+
+.soft-feature-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.soft-feature-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
